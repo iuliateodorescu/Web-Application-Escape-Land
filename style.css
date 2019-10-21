@@ -1,0 +1,40 @@
+body {
+  font-family: 'Lora';
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("pozalog.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+
+label {
+	color: white;
+}
+
+.login-box{
+	 max-width: 700px;
+	 float: none;
+	 margin: 150px auto;
+}
+
+.login-left{
+    background: rgba(47, 23, 15, 0.65);
+	padding: 30px;
+}
+
+.login-right{
+    background: orange;
+	padding: 30px;
+}
+
+.form-control{
+	background-color: transparent !important;
+}
