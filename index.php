@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Business Casual - Start Bootstrap Theme</title>
+  <title>Escape Room</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
           </h2>
           <p class="mb-3"> <?php echo $lang[$language]['content_no1'] ?> </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="products.html">BOOK NOW</a>
+            <a class="btn btn-primary btn-xl" href="products.html"> <?php echo $lang[$language]['button_no5'] ?> </a>
           </div>
         </div>
       </div>
@@ -69,11 +69,10 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">About us</span>
-              <span class="section-heading-lower">what we offer</span>
+              <span class="section-heading-upper"> <?php echo $lang[$language]['title_no2'] ?> </span>
+              <span class="section-heading-lower"> <?php echo $lang[$language]['title_no3'] ?> </span>
             </h2>
-            <p class="mb-0">Escape Land is a fun,new, team building real-life escape game entertainment concept, designed for small groups of 2-6 people. Your goal is simple:work together as a team and test your skills, to escape a locked room.
-            Escapers must be observing and use their critical thinking skills to escape the rooms. Communication with your team members is the most important if you want to get out in time. See if you can keep cool and escape the room in under 60 minutes.
+            <p class="mb-0"> <?php echo $lang[$language]['content_no2'] ?>
             </p>
           </div>
         </div>
@@ -83,7 +82,7 @@
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small">English | Romanian</p>
+      <p class="m-0 small"> <a href="index.php?local=en">English</a> | <a href="index.php?local=ro">Romana</a></p>
     </div>
   </footer>
 

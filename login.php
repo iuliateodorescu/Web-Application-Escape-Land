@@ -1,48 +1,86 @@
+<?php
+	include "config.php";
+?>
+
 <html>
 <head>
-    <title> User Login and Registration </title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Escape Room</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/business-casual.min.css" rel="stylesheet">
+	
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+    $(function(){
+         $('#navbar').load('reusenav.php');
+            });
+    </script>
 </head>
 
 <body>
+	<h1 class="site-heading text-center text-white d-none d-lg-block">
+		<span class="site-heading-upper text-primary mb-3"> <?php echo $lang[$language]['title'] ?> </span>
+		<span class="site-heading-lower"> <?php echo $lang[$language]['name'] ?> </span>
+	</h1>
+
+    <div class="container">
+      <div id="navbar">
+      </div>
+    </div>
+
     <div class="container">
 	   <div class="login-box">
 	   <div class="row">
 	   <div class="col-md-6 login-left">
-	    <h2> Login Here </h2>
+	    <h2> <?php echo $lang[$language]['login'] ?> </h2>
 		<form action="validation.php" method="post">
 		
 	    <div class="form-group">
-		 <label> Username</label>
+		 <label> <?php echo $lang[$language]['user'] ?> </label>
 		 <input type="text" name="user" class="form-control" required>
 		</div>
 		
 		  <div class="form-group">
-		 <label> Password</label>
+		 <label> <?php echo $lang[$language]['pass'] ?> </label>
 		 <input type="password" name="password" class="form-control" required>
 		</div>
-		<button type="submit" class="btn btn-primary">Login </button>
+		<button type="submit" class="btn btn-primary"> <?php echo $lang[$language]['login_button'] ?> </button>
 		
 		 </form>
 	
 	</div>
 	
 	 <div class="col-md-6 login-right">
-	    <h2> Register Here </h2>
+	    <h2> <?php echo $lang[$language]['register'] ?> </h2>
 		<form action="registration.php" method="post">
 		
 	    <div class="form-group">
-		 <label> Username</label>
+		 <label> <?php echo $lang[$language]['user'] ?> </label>
 		 <input type="text" name="user" class="form-control" required>
 		</div>
 		
 		  <div class="form-group">
-		 <label> Password</label>
+		 <label> <?php echo $lang[$language]['pass'] ?> </label>
 		 <input type="password" name="password" class="form-control" required>
 		</div>
-		<button type="submit" class="btn btn-primary"> Register</button>
+		<button type="submit" class="btn btn-primary"> <?php echo $lang[$language]['register_button'] ?> </button>
 		
 		 </form>
 	
@@ -50,5 +88,15 @@
 	  </div>
 	  </div>
 	</div>
+	
+	<footer class="footer text-faded text-center py-5">
+        <div class="container">
+          <p class="m-0 small"> <a href="login.php?local=en">English</a> | <a href="login.php?local=ro">Romana</a></p>
+        </div>
+    </footer>
+	
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
 </body>
 </html>

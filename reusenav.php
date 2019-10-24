@@ -20,21 +20,21 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="index.html">  <?php echo $lang[$language]['button_no1'] ?>
+                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?>
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="about.html"> <?php echo $lang[$language]['button_no2'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="about.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="products.html"> <?php echo $lang[$language]['button_no3'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="products.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="login.php"> <?php echo $lang[$language]['button_no4'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="reservation.html"> <?php echo $lang[$language]['button_no5'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="reservation.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
 
             </ul>
