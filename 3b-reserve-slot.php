@@ -23,6 +23,10 @@
 
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
+  
+  <!-- reservation&calendar-->
+  <script src="public/3b-reserve-slot.js"></script>
+  <link href="public/3-theme.css" rel="stylesheet">
 
 </head>
 
@@ -41,10 +45,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?>
-                        <span class="sr-only">(current)</span>
-                    </a>
+                <li class="nav-item px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?> 
+					<span class="sr-only">(current)</span>
+					</a>
                 </li>
                 <li class="nav-item px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="about.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
@@ -55,7 +59,7 @@
                 <li class="nav-item px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="login.php"> <?php echo $lang[$language]['button_no4'] ?> </a>
                 </li>
-                <li class="nav-item px-lg-5">
+                <li class="nav-item active px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="3b-reserve-slot.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
 
@@ -64,40 +68,23 @@
     </div>
 </nav>
 
-
-  <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/home.jpg" alt="">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-lower"> <?php echo $lang[$language]['title_no1'] ?> </span>
-          </h2>
-          <p class="mb-3"> <?php echo $lang[$language]['content_no1'] ?> </p>
-          <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="products.html"> <?php echo $lang[$language]['button_no5'] ?> </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <div class="cta-inner text-center rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper"> <?php echo $lang[$language]['title_no2'] ?> </span>
-              <span class="section-heading-lower"> <?php echo $lang[$language]['title_no3'] ?> </span>
-            </h2>
-            <p class="mb-0"> <?php echo $lang[$language]['content_no2'] ?>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<form id="res_form" onsubmit="return res.save()">
+      <label for="res_name">Name</label>
+      <input type="text" required id="res_name"/>
+      <label for="res_email">Email</label>
+      <input type="email" required id="res_email"/>
+      <label for="res_tel">Telephone Number</label>
+      <input type="text" required id="res_tel"/>
+      <label for="res_notes">Notes (if any)</label>
+      <input type="text" id="res_notes"/>
+      <label>Reservation Date</label>
+      <div id="res_date" class="calendar"></div>
+      <label>Reservation Slot</label>
+      <div id="res_slot"></div>
+      <button id="res_go" disabled>
+        Submit
+      </button>
+    </form>
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">

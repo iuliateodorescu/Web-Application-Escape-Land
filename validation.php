@@ -10,19 +10,15 @@ $name = $_POST['user'];
 $pass = $_POST['password'];
 $hash = $_POST['hash'];
 
-if ($hash == hash){
-   
-}
-
 $s = " select * from usertable where name = '$name' && password = '$pass'";
 
 $result = mysqli_query($con, $s);
 
 $num = mysqli_num_rows($result);
 
-if ($num==1){
+if ( ($num==1) && (password_verify($password, $hash)) ){
 	$_SESSION['username'] = $name;
-	header('location:welcome.php');
+	header('location:index.php');
 }
 else {
 	header('location:login.php');

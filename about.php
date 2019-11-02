@@ -14,7 +14,7 @@
 
   <title>Escape Room</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -27,11 +27,15 @@
 
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+  <!--Timetable-->
+  <link href="css/timetable.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
   <script>
-    $(function(){
-      $('#navbar').load('reusenav.php');
+	$(document).ready(function() {
+        $('.opening-hours li').eq(new Date().getDay()).addClass('today');
     });
   </script>
 
@@ -44,10 +48,36 @@
 	<span class="site-heading-lower"> <?php echo $lang[$language]['name'] ?> </span>
   </h1>
 
-  <div class="container">
-    <div id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">escape land</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?> 
+					<span class="sr-only">(current)</span>
+					</a>
+                </li>
+                <li class="nav-item active px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="about.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
+                </li>
+                <li class="nav-item px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="products.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
+                </li>
+                <li class="nav-item px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="login.php"> <?php echo $lang[$language]['button_no4'] ?> </a>
+                </li>
+                <li class="nav-item px-lg-5">
+                    <a class="nav-link text-uppercase text-expanded" href="3b-reserve-slot.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
+                </li>
+
+            </ul>
+        </div>
     </div>
-  </div>
+</nav>
 
   <div class="container">
 	<div class="login-box">
@@ -68,6 +98,30 @@
 	  </div>
 	</div>
   </div>
+  
+  <!--Timetable-->
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+					<div class="business-hours">
+						<h2 class="title">Opening Hours</h2>
+						<ul class="list-unstyled opening-hours">
+							<li>Sunday <span class="pull-right">Closed</span></li>
+							<li>Monday <span class="pull-right">10:00-18:00</span></li>
+							<li>Tuesday <span class="pull-right">10:00-18:00</span></li>
+							<li>Wednesday <span class="pull-right">10:00-18:00</span></li>
+							<li>Thursday <span class="pull-right">10:00-18:00</span></li>
+							<li>Friday <span class="pull-right">10:00-20:00</span></li>
+							<li>Saturday <span class="pull-right">10:00-20:00</span></li>
+						</ul>
+					</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
