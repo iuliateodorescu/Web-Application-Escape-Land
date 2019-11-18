@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Escape Room</title>
+  <title>Escape Land</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css"
@@ -57,21 +57,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?> 
+                    <a class="nav-link text-uppercase text-expanded" href="home.php">  <?php echo $lang[$language]['button_no1'] ?> 
 					<span class="sr-only">(current)</span>
 					</a>
                 </li>
                 <li class="nav-item active px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="about.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="contact.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="products.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="rooms.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="login.php"> <?php echo $lang[$language]['button_no4'] ?> </a>
-                </li>
-                <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="3b-reserve-slot.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="booking.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
 
             </ul>
@@ -106,15 +103,15 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
 					<div class="business-hours">
-						<h2 class="title">Opening Hours</h2>
+						<h2 class="title"> <?php echo $lang[$language]['timetable'] ?> </h2>
 						<ul class="list-unstyled opening-hours">
-							<li>Sunday <span class="pull-right">Closed</span></li>
-							<li>Monday <span class="pull-right">10:00-18:00</span></li>
-							<li>Tuesday <span class="pull-right">10:00-18:00</span></li>
-							<li>Wednesday <span class="pull-right">10:00-18:00</span></li>
-							<li>Thursday <span class="pull-right">10:00-18:00</span></li>
-							<li>Friday <span class="pull-right">10:00-20:00</span></li>
-							<li>Saturday <span class="pull-right">10:00-20:00</span></li>
+							<li> <?php echo $lang[$language]['sun'] ?> <span class="pull-right"> <?php echo $lang[$language]['closed'] ?> </span></li>
+							<li> <?php echo $lang[$language]['mon'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
+							<li> <?php echo $lang[$language]['tue'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
+							<li> <?php echo $lang[$language]['wed'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
+							<li> <?php echo $lang[$language]['thu'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
+							<li> <?php echo $lang[$language]['fri'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
+							<li> <?php echo $lang[$language]['sat'] ?> <span class="pull-right"> <?php echo $lang[$language]['slot'] ?> </span></li>
 						</ul>
 					</div>
           </div>
@@ -125,7 +122,7 @@
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small"> <a href="about.php?local=en">English</a> | <a href="about.php?local=ro">Romana</a> </p>
+      <p class="m-0 small"> <a href="contact.php?local=en">English</a> | <a href="contact.php?local=ro">Romana</a> </p>
     </div>
   </footer>
 

@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Escape room</title>
+  <title>Escape Land</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,21 +42,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="index.php">  <?php echo $lang[$language]['button_no1'] ?> 
+                    <a class="nav-link text-uppercase text-expanded" href="home.php">  <?php echo $lang[$language]['button_no1'] ?> 
 					<span class="sr-only">(current)</span>
 					</a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="about.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="contact.php"> <?php echo $lang[$language]['button_no2'] ?> </a>
                 </li>
                 <li class="nav-item active px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="products.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="rooms.php"> <?php echo $lang[$language]['button_no3'] ?> </a>
                 </li>
                 <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="login.php"> <?php echo $lang[$language]['button_no4'] ?> </a>
-                </li>
-                <li class="nav-item px-lg-5">
-                    <a class="nav-link text-uppercase text-expanded" href="3b-reserve-slot.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
+                    <a class="nav-link text-uppercase text-expanded" href="booking.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
 
             </ul>
@@ -150,7 +147,7 @@
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small"> <a href="products.php?local=en">English</a> | <a href="products.php?local=ro">Romana</a></p>
+      <p class="m-0 small"> <a href="rooms.php?local=en">English</a> | <a href="rooms.php?local=ro">Romana</a></p>
     </div>
   </footer>
 
