@@ -12,10 +12,12 @@ $hash = md5($pass);
 
 $s = " SELECT * FROM usertable WHERE name = '$name' && password = '$hash'";
 $result = mysqli_query($con, $s);
-$num = mysqli_num_rows($result);
+$row = mysqli_fetch_assoc($result);
 
+$num = mysqli_num_rows($result);
 if ( $num == 1 ){
 	$_SESSION['username'] = $name;
+	$_SESSION['isAdmin']=$row['isAdmin'];
 	header('location:home.php');
 }
 else {

@@ -15,10 +15,10 @@ $num = mysqli_num_rows($result);
 
 if ($num==1){
 	echo '<script>alert("Username already taken!")</script>';
-	header('location: index.php');
+	header('location: index.php?response=Username_already_taken!');
 }
 else {
-	$reg = "INSERT INTO usertable(name, password) VALUES ('$name', '$hash')";
+	$reg = "INSERT INTO usertable(name, password,isAdmin) VALUES ('$name', '$hash','0')";
     mysqli_query($con, $reg);
 	$_SESSION['username'] = $name;
   	header('location: home.php');

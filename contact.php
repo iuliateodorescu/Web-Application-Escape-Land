@@ -70,6 +70,14 @@
                 <li class="nav-item px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="booking.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
+				
+								<?php
+								  if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1) {
+										echo '<li class="nav-item px-lg-5">
+			                     <a class="nav-link text-uppercase text-expanded" href="adminPage.php">'.$lang[$language]['button_no6'].'</a>
+			                   </li>';
+								  }
+								?>
 
             </ul>
         </div>

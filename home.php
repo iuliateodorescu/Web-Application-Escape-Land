@@ -55,6 +55,13 @@
                 <li class="nav-item px-lg-5">
                     <a class="nav-link text-uppercase text-expanded" href="booking.php"> <?php echo $lang[$language]['button_no5'] ?> </a>
                 </li>
+								<?php
+								  if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1) {
+										echo '<li class="nav-item px-lg-5">
+			                     <a class="nav-link text-uppercase text-expanded" href="adminPage.php">'.$lang[$language]['button_no6'].'</a>
+			                   </li>';
+								  }
+								?>
 
             </ul>
         </div>
@@ -68,7 +75,7 @@
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/home.jpg" alt="">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
-            <span class="section-heading-lower"> 
+            <span class="section-heading-lower">
 				<?php  if (isset($_SESSION['username'])){
 							echo $lang[$language]['greeting'];
 							echo ", ";
@@ -91,8 +98,8 @@
       </div>
     </div>
   </section>
-  
-  
+
+
   <section class="page-section cta">
     <div class="container">
       <div class="row">
@@ -109,7 +116,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
